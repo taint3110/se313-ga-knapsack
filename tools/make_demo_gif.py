@@ -127,6 +127,15 @@ def main(argv=None) -> int:
 
     print("Đang chạy demo.py để lấy nội dung ...")
     raw_lines = capture_demo(args.demo_args)
+
+    # Bản chữ để đọc theo nhịp của mình, vì ảnh động thì không dừng lại được.
+    transcript = Path(args.out).with_name("demo-transcript.txt")
+    transcript.parent.mkdir(parents=True, exist_ok=True)
+    transcript.write_text(
+        "\n".join(ANSI.sub("", line) for line in raw_lines) + "\n", encoding="utf-8"
+    )
+    print(f"Đã ghi {transcript.name}")
+
     font = find_mono_font()
     # Khung hình phải đủ rộng cho dòng dài nhất, nếu không bảng sẽ bị cắt mất đuôi.
     cols = max(COLS, max(len(ANSI.sub("", line)) for line in raw_lines) + 2)

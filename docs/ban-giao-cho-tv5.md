@@ -15,6 +15,13 @@ Biểu đồ PNG đã có sẵn trong `results/figures/`, chèn thẳng vào sli
 ngay. Nếu muốn tự vẽ bằng Excel hay Google Sheets cho hợp màu slide thì mở
 đúng file CSV ghi trong từng mục bên dưới.
 
+Muốn đi qua toàn bộ số liệu một lượt thì mở
+**`results/bieu-do-tung-hinh.pdf`**: 10 trang, mỗi trang một biểu đồ kèm dòng
+ghi lấy số từ file nào và câu kết luận nên viết. Lật tới lui và phóng to thoải
+mái. Từng trang cũng được tách sẵn thành ảnh rời trong `results/slides/` để
+chèn vào slide. File `.gif` cùng tên chỉ là bản chạy tự động để xem lướt, nó
+không dừng và không tua được nên đừng dùng để đọc kỹ.
+
 ## 1. Hiểu dữ liệu trước khi vẽ
 
 **Cột quan trọng nhất của cả báo cáo là `gap_percent`.** Đó là phần trăm lệch

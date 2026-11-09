@@ -29,11 +29,11 @@ python -m ga.report             # gom CSV thành bảng tóm tắt docs/ket-qua-
 
 Thứ tự bắt buộc: `experiments` chạy trước, rồi mới tới `plots` và `report`.
 
-Thêm một lệnh phụ, ghi lại phần demo thành ảnh động để làm bản dự phòng khi máy
-chiếu trục trặc:
+Hai lệnh phụ trong `tools/`, đóng gói lại cho người xem:
 
 ```bash
-python tools/make_demo_gif.py   # xuất results/demo.gif
+python tools/make_charts_deck.py  # 10 biểu đồ thành PDF, ảnh rời và ảnh động
+python tools/make_demo_gif.py     # ghi phần demo thành ảnh động và bản chữ
 ```
 
 Vài tham số hay dùng khi demo trên lớp:
@@ -56,12 +56,14 @@ ga/experiments.py        chạy thí nghiệm, xuất CSV
 ga/plots.py              vẽ biểu đồ từ CSV
 ga/report.py             gom CSV thành bảng markdown
 ga/hand_example.py       ví dụ tính tay từng bước, phần của TV3
-tools/make_demo_gif.py   ghi phần demo thành ảnh động dự phòng
-data/                    bốn bộ dữ liệu dạng JSON
-results/                 CSV kết quả thô và bảng tổng hợp
-results/figures/         10 biểu đồ PNG
-results/demo.gif         bản ghi hình phần demo, không tiếng
-docs/                    tài liệu bàn giao cho từng thành viên
+tools/make_charts_deck.py  đóng biểu đồ thành PDF, ảnh rời và ảnh động
+tools/make_demo_gif.py     ghi phần demo thành ảnh động và bản chữ
+data/                      bốn bộ dữ liệu dạng JSON
+results/                   CSV kết quả thô và bảng tổng hợp
+results/figures/           10 biểu đồ PNG
+results/slides/            10 trang biểu đồ kèm chú thích, dạng PNG
+results/demo.gif           bản ghi hình phần demo, không tiếng
+docs/                      tài liệu bàn giao cho từng thành viên
 ```
 
 ## 4. Bài toán và cách mã hoá
@@ -122,8 +124,10 @@ thêm vét cạn `2^n` để chứng minh quy hoạch động đúng.
 | `docs/vi-du-tinh-tay.md` | TV3: ví dụ tính tay từng bước, sinh tự động |
 | `docs/kich-ban-quay-video.md` | TV4: kịch bản quay video demo dự phòng |
 | `docs/cau-hoi-thuong-gap.md` | cả nhóm: câu hỏi giảng viên hay hỏi và cách trả lời |
+| `results/bieu-do-tung-hinh.pdf` | 10 trang biểu đồ kèm nguồn dữ liệu và câu kết luận |
+| `results/slides/` | từng trang trên dạng PNG rời, chèn thẳng vào slide |
 | `results/demo.gif` | bản ghi hình phần demo, dùng khi máy chiếu trục trặc |
-| `results/bieu-do-tung-hinh.gif` | đi qua 10 biểu đồ kèm nguồn dữ liệu và câu kết luận |
+| `results/demo-transcript.txt` | toàn bộ chữ phần demo in ra, để đọc lại hoặc đưa vào phụ lục |
 
 ## 8. Tái lập kết quả
 

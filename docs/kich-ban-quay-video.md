@@ -9,7 +9,12 @@ Hai video, quay riêng, tổng cộng khoảng 7 phút.
 
 Trong thư mục này đã có sẵn `results/demo.gif`, bản ghi hình tự động của Video 1
 không có tiếng. Dùng tạm được ngay, nhưng nên quay lại có giọng nói vì giảng
-viên đánh giá cả phần diễn giải.
+viên đánh giá cả phần diễn giải. Toàn bộ chữ mà phần demo in ra cũng được lưu
+ở `results/demo-transcript.txt`, tiện đọc lại khi soạn lời dẫn.
+
+Riêng Video 2, nếu không kịp quay thì gửi thẳng `results/bieu-do-tung-hinh.pdf`
+cũng đủ: 10 trang, mỗi trang một biểu đồ kèm nguồn dữ liệu và câu kết luận,
+người nhận tự lật theo nhịp của họ.
 
 ## 0. Chuẩn bị trước khi bấm ghi
 
