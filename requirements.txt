@@ -1,0 +1,5 @@
+# Phần lõi của giải thuật (ga/problem.py, ga/algorithm.py, ga/baselines.py,
+# demo.py, ga/hand_example.py) chỉ dùng thư viện chuẩn của Python, không cần
+# cài gì thêm. Hai gói dưới đây phục vụ phần thí nghiệm và vẽ biểu đồ.
+numpy>=1.26        # tăng tốc bảng quy hoạch động, có thể thiếu vẫn chạy được
+matplotlib>=3.8    # vẽ biểu đồ trong ga/plots.py

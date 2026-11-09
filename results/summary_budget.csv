@@ -1,0 +1,5 @@
+﻿n,budget,generations,runs,best_value_mean,best_value_std,best_value_min,best_value_max,gap_percent_mean,gap_percent_std,gap_percent_min,gap_percent_max,runtime_sec_mean,runtime_sec_std,runtime_sec_min,runtime_sec_max,beats_greedy_mean,beats_greedy_std,beats_greedy_min,beats_greedy_max,success_rate
+500,9000,89,5,16655.8,15.1314,16630.0,16676.0,1.5324,0.0895,1.4129,1.6849,1.0997,0.0425,1.0498,1.1502,0.0,0.0,0.0,0.0,0.0
+500,30000,299,5,16851.0,8.0,16845.0,16865.0,0.3783,0.0473,0.2956,0.4138,3.6861,0.1449,3.4924,3.9027,0.0,0.0,0.0,0.0,0.0
+500,100000,999,5,16891.0,4.899,16885.0,16895.0,0.1419,0.029,0.1182,0.1774,11.781,0.1786,11.5267,12.005,1.0,0.0,1.0,1.0,0.0
+500,300000,2999,5,16895.0,0.0,16895.0,16895.0,0.1182,0.0,0.1182,0.1182,36.6325,0.5284,35.999,37.4745,1.0,0.0,1.0,1.0,0.0

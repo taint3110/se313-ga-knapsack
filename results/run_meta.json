@@ -1,0 +1,65 @@
+{
+  "seeds": 30,
+  "budget_evaluations": 9060,
+  "base_config": {
+    "pop_size": 60,
+    "generations": 150,
+    "selection": "tournament",
+    "tournament_k": 3,
+    "crossover": "one_point",
+    "p_crossover": 0.9,
+    "p_mutation": null,
+    "mutation_scale": 1.0,
+    "elitism": 2,
+    "repair_mode": "repair",
+    "penalty_coef": 2.0,
+    "stop_no_improve": null,
+    "seed": 0,
+    "label": "base"
+  },
+  "tuned_naive_config": {
+    "pop_size": 200,
+    "generations": 44,
+    "selection": "tournament",
+    "tournament_k": 2,
+    "crossover": "uniform",
+    "p_crossover": 1.0,
+    "p_mutation": null,
+    "mutation_scale": 2.0,
+    "elitism": 1,
+    "repair_mode": "repair",
+    "penalty_coef": 2.0,
+    "stop_no_improve": null,
+    "seed": 0,
+    "label": "tuned_naive"
+  },
+  "tuned_config": {
+    "pop_size": 100,
+    "generations": 89,
+    "selection": "tournament",
+    "tournament_k": 2,
+    "crossover": "uniform",
+    "p_crossover": 1.0,
+    "p_mutation": null,
+    "mutation_scale": 1.0,
+    "elitism": 1,
+    "repair_mode": "repair",
+    "penalty_coef": 2.0,
+    "stop_no_improve": null,
+    "seed": 0,
+    "label": "tuned"
+  },
+  "optima": {
+    "kp_small": 672,
+    "kp_main": 3395,
+    "kp_easy": 4328,
+    "kp_large": 16915
+  },
+  "instances": {
+    "kp_small": "kp_small [strongly_correlated]: n = 20 món, sức chứa W = 542 (bằng 50% tổng trọng lượng), lấy hết thì được 1285 điểm giá trị",
+    "kp_main": "kp_main [strongly_correlated]: n = 100 món, sức chứa W = 2725 (bằng 50% tổng trọng lượng), lấy hết thì được 6451 điểm giá trị",
+    "kp_easy": "kp_easy [uncorrelated]: n = 100 món, sức chứa W = 2725 (bằng 50% tổng trọng lượng), lấy hết thì được 5686 điểm giá trị",
+    "kp_large": "kp_large [strongly_correlated]: n = 500 món, sức chứa W = 13505 (bằng 50% tổng trọng lượng), lấy hết thì được 32011 điểm giá trị"
+  },
+  "total_runtime_sec": 905.82
+}
