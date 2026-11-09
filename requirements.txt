@@ -3,3 +3,8 @@
 # cài gì thêm. Hai gói dưới đây phục vụ phần thí nghiệm và vẽ biểu đồ.
 numpy>=1.26        # tăng tốc bảng quy hoạch động, có thể thiếu vẫn chạy được
 matplotlib>=3.8    # vẽ biểu đồ trong ga/plots.py
+
+# Chỉ cần khi muốn chạy lại hai công cụ trong tools/. Các file xuất ra đã có
+# sẵn trong results/ nên bình thường không phải cài.
+imageio>=2.34      # ghi video MP4 trong tools/make_demo_video.py
+imageio-ffmpeg>=0.5
