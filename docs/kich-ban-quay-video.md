@@ -7,7 +7,7 @@ Hai video, quay riêng, tổng cộng khoảng 7 phút.
 - **Video 2 (4 phút)**: đi qua dữ liệu và biểu đồ, quay riêng cho TV5 nắm số
   liệu nào quan trọng.
 
-Trong thư mục này đã có sẵn `results/demo.gif`, bản ghi hình tự động của Video 1
+Trong thư mục này đã có sẵn `results/demo.mp4`, bản ghi hình tự động của Video 1
 không có tiếng. Dùng tạm được ngay, nhưng nên quay lại có giọng nói vì giảng
 viên đánh giá cả phần diễn giải. Toàn bộ chữ mà phần demo in ra cũng được lưu
 ở `results/demo-transcript.txt`, tiện đọc lại khi soạn lời dẫn.
@@ -123,7 +123,7 @@ python -m ga.experiments
 
 Không cần quay hết 10 phút chạy, chỉ quay đoạn đầu rồi cắt sang lúc đã xong.
 
-> Lệnh này chạy năm nhóm thí nghiệm, mỗi cấu hình lặp lại 30 lần với 30 seed
+> Lệnh này chạy sáu nhóm thí nghiệm, mỗi cấu hình lặp lại 30 lần với 30 seed
 > khác nhau rồi ghi ra CSV. Lặp nhiều lần là bắt buộc vì GA là thuật toán ngẫu
 > nhiên, một lần chạy đẹp không chứng minh được gì.
 
@@ -147,7 +147,7 @@ Nhấn mạnh ba điểm cho TV5:
 python -m ga.plots
 ```
 
-Mở lần lượt 9 file PNG trong `results/figures/`, mỗi hình nói một câu kết luận.
+Mở `results/bieu-do-tung-hinh.pdf` rồi lật lần lượt 10 trang, mỗi trang nói một câu kết luận.
 Câu kết luận có sẵn trong `docs/ban-giao-cho-tv5.md`.
 
 ### Phần 4, bảng tóm tắt, 30 giây
