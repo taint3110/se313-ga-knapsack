@@ -122,6 +122,7 @@ thêm vét cạn `2^n` để chứng minh quy hoạch động đúng.
 | `docs/ban-giao-cho-tv5.md` | TV5: dữ liệu nào vẽ biểu đồ nào, dàn ý Kết quả và Nhận xét |
 | `docs/ket-qua-tom-tat.md` | bảng số liệu tổng hợp, sinh tự động từ CSV |
 | `docs/vi-du-tinh-tay.md` | TV3: ví dụ tính tay từng bước, sinh tự động |
+| `docs/kich-ban-thuyet-trinh-2phut.md` | TV4: lời nói khi demo trên lớp, 2 phút |
 | `docs/kich-ban-quay-video.md` | TV4: kịch bản quay video demo dự phòng |
 | `docs/cau-hoi-thuong-gap.md` | cả nhóm: câu hỏi giảng viên hay hỏi và cách trả lời |
 | `results/bieu-do-tung-hinh.pdf` | 10 trang biểu đồ kèm nguồn dữ liệu và câu kết luận |

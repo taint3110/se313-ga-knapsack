@@ -263,6 +263,10 @@ def run_ga(
     n = inst.n
     p_mut = config.mutation_rate(n)
     t0 = time.perf_counter()
+    # Thời gian nằm trong hook hiển thị không phải là thời gian của thuật toán.
+    # Phần demo cố ý in chậm lại cho người xem kịp đọc, nếu tính luôn vào đây
+    # thì con số thời gian chạy báo cáo ra sẽ sai hoàn toàn.
+    hook_time = 0.0
 
     pop = init_population(n, config.pop_size, rng)
     history: List[GenStats] = []
@@ -311,11 +315,13 @@ def run_ga(
             diversity=population_diversity(pop),
             unique=len({tuple(ind) for ind in pop}),
             evaluations=counter.count,
-            elapsed=time.perf_counter() - t0,
+            elapsed=time.perf_counter() - t0 - hook_time,
         )
         history.append(stats)
         if on_generation is not None:
+            t_hook = time.perf_counter()
             on_generation(stats, best_genes)
+            hook_time += time.perf_counter() - t_hook
 
         no_improve = 0 if improved else no_improve + 1
         if config.stop_no_improve is not None and no_improve >= config.stop_no_improve:
@@ -365,6 +371,6 @@ def run_ga(
         generations_run=history[-1].generation,
         gen_to_best=gen_to_best,
         evaluations=counter.count,
-        runtime=time.perf_counter() - t0,
+        runtime=time.perf_counter() - t0 - hook_time,
         config=config,
     )
