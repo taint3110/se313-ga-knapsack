@@ -106,36 +106,24 @@ Quy ước trong file này:
 > toán giữ nguyên. Đổi lại, chính vì quy hoạch động cho **biết trước nghiệm tối
 > ưu** nên nhóm em mới đo được giải thuật di truyền lệch bao nhiêu phần trăm.
 >
-> **Chuyển sang bạn tiếp theo:** Và xin lưu ý, những gì các bạn vừa xem mới chỉ
-> là **một lần chạy, trên một trong bốn bộ dữ liệu**. Mà đây là thuật toán ngẫu
-> nhiên, một lần chạy đẹp thì **chưa chứng minh được gì**. Nên nhóm em lặp lại
-> **30 lần cho mỗi cấu hình** rồi mới lấy trung bình. Toàn bộ thiết lập thực
-> nghiệm đó, cùng các tham số các bạn vừa thấy chạy trên màn hình, xin mời bạn
-> tiếp theo trình bày.
+> **Kết:** Tóm lại, phần demo vừa rồi cho thấy ba điều. Một là bài toán này
+> **không thể vét cạn**. Hai là giải thuật di truyền tìm được nghiệm **đúng
+> bằng nghiệm tối ưu**, chỉ trong **0.2 giây**. Ba là khi so cùng một ngân
+> sách, nó **tốt hơn cả ba thuật toán còn lại**. Phần cài đặt của em xin hết,
+> em mời bạn tiếp theo ạ.
 
 ---
 
-## Nối với slide "Thiết lập thực nghiệm" của bạn kế tiếp
+## Một lưu ý khi bàn giao
 
-Slide ngay sau phần demo là slide thiết lập thực nghiệm, liệt kê 4 bộ dữ liệu,
-quần thể 60, 150 thế hệ, lai ghép một điểm 0.9, đột biến 1/n, mỗi cấu hình chạy
-30 lần, ngân sách 9060 lần đánh giá.
+Slide ngay sau phần demo là slide thiết lập thực nghiệm, do bạn khác trình bày.
+**Đừng giới thiệu trước nội dung slide đó**, cứ kết gọn phần mình rồi mời bạn
+tiếp theo. Nói chen vào phần của người khác thì vừa mất thời gian của mình, vừa
+làm bạn ấy mở đầu bị hụt.
 
-Nghĩa là **phần lớn tham số trên slide đó mình vừa nói qua rồi**. Đừng coi đó
-là trùng lặp, hãy dùng nó làm lợi thế:
-
-- Cuối cảnh 3 mình đã dặn cả lớp nhớ con số **9060**, cảnh 5 nhắc lại lần hai,
-  tới slide sau là lần thứ ba. Ba lần thì người nghe thuộc luôn.
-- Câu chốt của mình cố ý đặt vấn đề "mới chỉ là một lần chạy trên một bộ dữ
-  liệu", để slide sau trả lời bằng "bốn bộ dữ liệu, mỗi cấu hình 30 lần". Hai
-  phần ăn khớp nhau chứ không phải hai người nói hai chuyện rời rạc.
-- Bạn trình bày slide đó chỉ cần nói nhanh phần tham số vì lớp đã thấy nó chạy
-  thật rồi, dành thời gian cho phần ngân sách và số lần lặp, là hai chỗ người
-  nghe dễ bỏ qua nhất.
-
-Nếu bạn ấy muốn slide đầy đủ hơn thì còn thiếu ba dòng: **chọn lọc tournament
-k = 3**, **giữ 2 cá thể tinh hoa**, và **xử lý ràng buộc bằng cách sửa chữa cá
-thể**. Ba thứ này demo có nói tới nên để lên slide cho khớp.
+Chỉ có một con số đi xuyên hai phần là **9060 lần đánh giá fitness**. Mình đã
+nhắc nó hai lần ở cảnh 3 và cảnh 5, nên khi bạn ấy nói lại thì cả lớp đã quen
+tai, đó là chỗ hai phần ăn khớp nhau mà không cần ai giới thiệu cho ai.
 
 ---
 
