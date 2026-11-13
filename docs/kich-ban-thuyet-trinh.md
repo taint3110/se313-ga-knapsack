@@ -103,11 +103,39 @@ Quy ước trong file này:
 > hoạch động tốt hơn thật. Nhưng nó cần bảng **100 nhân 2726 ô nhớ**, đòi trọng
 > lượng phải là **số nguyên**, và thêm một ràng buộc mới là **phải thiết kế lại
 > từ đầu**. Còn giải thuật di truyền thì **chỉ sửa hàm fitness**, khung thuật
-> toán giữ nguyên.
+> toán giữ nguyên. Đổi lại, chính vì quy hoạch động cho **biết trước nghiệm tối
+> ưu** nên nhóm em mới đo được giải thuật di truyền lệch bao nhiêu phần trăm.
 >
-> **Chuyển sang bạn tiếp theo:** Bài cái túi ở đây đóng vai trò một **bài toán
-> mẫu**, vì biết trước nghiệm tối ưu nên nhóm em mới đo được sai lệch bao nhiêu
-> phần trăm. Phần kết quả chi tiết xin mời bạn tiếp theo trình bày.
+> **Chuyển sang bạn tiếp theo:** Và xin lưu ý, những gì các bạn vừa xem mới chỉ
+> là **một lần chạy, trên một trong bốn bộ dữ liệu**. Mà đây là thuật toán ngẫu
+> nhiên, một lần chạy đẹp thì **chưa chứng minh được gì**. Nên nhóm em lặp lại
+> **30 lần cho mỗi cấu hình** rồi mới lấy trung bình. Toàn bộ thiết lập thực
+> nghiệm đó, cùng các tham số các bạn vừa thấy chạy trên màn hình, xin mời bạn
+> tiếp theo trình bày.
+
+---
+
+## Nối với slide "Thiết lập thực nghiệm" của bạn kế tiếp
+
+Slide ngay sau phần demo là slide thiết lập thực nghiệm, liệt kê 4 bộ dữ liệu,
+quần thể 60, 150 thế hệ, lai ghép một điểm 0.9, đột biến 1/n, mỗi cấu hình chạy
+30 lần, ngân sách 9060 lần đánh giá.
+
+Nghĩa là **phần lớn tham số trên slide đó mình vừa nói qua rồi**. Đừng coi đó
+là trùng lặp, hãy dùng nó làm lợi thế:
+
+- Cuối cảnh 3 mình đã dặn cả lớp nhớ con số **9060**, cảnh 5 nhắc lại lần hai,
+  tới slide sau là lần thứ ba. Ba lần thì người nghe thuộc luôn.
+- Câu chốt của mình cố ý đặt vấn đề "mới chỉ là một lần chạy trên một bộ dữ
+  liệu", để slide sau trả lời bằng "bốn bộ dữ liệu, mỗi cấu hình 30 lần". Hai
+  phần ăn khớp nhau chứ không phải hai người nói hai chuyện rời rạc.
+- Bạn trình bày slide đó chỉ cần nói nhanh phần tham số vì lớp đã thấy nó chạy
+  thật rồi, dành thời gian cho phần ngân sách và số lần lặp, là hai chỗ người
+  nghe dễ bỏ qua nhất.
+
+Nếu bạn ấy muốn slide đầy đủ hơn thì còn thiếu ba dòng: **chọn lọc tournament
+k = 3**, **giữ 2 cá thể tinh hoa**, và **xử lý ràng buộc bằng cách sửa chữa cá
+thể**. Ba thứ này demo có nói tới nên để lên slide cho khớp.
 
 ---
 
