@@ -1,146 +1,113 @@
 # Kịch bản nói phần demo
 
-Dành cho người trình bày phần cài đặt. Bản đầy đủ dài khoảng **3 phút rưỡi**.
-Những đoạn đánh dấu *(cắt được)* có thể bỏ khi thiếu giờ, bỏ hết thì còn khoảng
-**2 phút 15**.
+Dành cho người trình bày phần cài đặt. Đọc thong thả hết bài khoảng **2 phút
+40**. Hai đoạn đánh dấu *(cắt được)* bỏ đi thì còn khoảng **2 phút 15**.
 
-Cách chạy: `python demo.py`. Chương trình dừng lại chờ Enter sau mỗi cảnh nên
-nhịp hoàn toàn do mình quyết định, nói xong đoạn nào mới bấm Enter sang cảnh
-đó. Nếu mở `results/demo.mp4` thay vì chạy trực tiếp thì xem bảng mốc thời gian
-ở cuối file.
+Cách chạy: `python demo.py`. Chương trình dừng chờ Enter sau mỗi cảnh nên nhịp
+do mình quyết định. Nếu mở `results/demo.mp4` thay vì chạy trực tiếp thì xem
+bảng mốc thời gian ở cuối file.
 
-**Chữ in đậm là chỗ nhấn giọng.** Nhấn bằng cách nói chậm lại và to hơn một
-chút, không phải gằn giọng. Mỗi đoạn chỉ có hai tới ba chỗ, nhấn nhiều quá thì
-thành ra không nhấn gì cả. Chữ in nghiêng trong ngoặc là ghi chú cho mình,
-không đọc lên.
+Quy ước trong file này:
+
+- **Chữ in đậm** là chỗ nhấn giọng, nhấn bằng cách nói chậm lại và to hơn một
+  chút. Mỗi đoạn chỉ hai tới ba chỗ, nhấn nhiều quá thì thành ra không nhấn gì.
+- Dòng bắt đầu bằng **Chuyển:** là câu nối sang cảnh sau, nói đúng lúc tay bấm
+  Enter. Nhờ mấy câu này mà bài nói liền mạch chứ không bị giật cục giữa các
+  cảnh.
+- *Chữ in nghiêng trong ngoặc* là ghi chú cho mình, không đọc lên.
 
 ---
 
-## Mở đầu, 20 giây
+## Mở đầu, 15 giây
 
-*(Terminal đã mở sẵn ở thư mục dự án, lệnh đã gõ nhưng chưa bấm Enter.)*
+*(Terminal mở sẵn ở thư mục dự án, lệnh đã gõ nhưng chưa bấm Enter.)*
 
-> Em xin phép trình bày phần cài đặt. Giải thuật tiến hoá là tên của **cả một
-> họ** thuật toán, và nhóm em chọn nhánh tiêu biểu nhất là **giải thuật di
-> truyền** để cài đặt, vì bài toán Cái túi 0 1 là bài rời rạc, mỗi món chỉ có
-> **lấy hoặc không lấy**, rất hợp với cách mã hoá nhị phân của giải thuật di
-> truyền.
+> Em xin phép trình bày phần cài đặt. Giải thuật tiến hoá là **cả một họ**
+> thuật toán, nhóm em chọn nhánh tiêu biểu nhất là **giải thuật di truyền**, vì
+> bài Cái túi 0 1 là bài rời rạc, mỗi món chỉ **lấy hoặc không lấy**, rất hợp
+> với cách mã hoá nhị phân. Chương trình viết bằng Python, phần thuật toán
+> **tự cài** chứ không dùng thư viện có sẵn.
 >
-> Như các bạn vừa nghe, thuật toán này làm việc trên một quần thể lời giải, qua
-> mỗi thế hệ thì chọn lọc, lai ghép và đột biến để quần thể tốt dần lên. Bây
-> giờ em cho **chạy thật** để thấy quá trình đó diễn ra như thế nào. Chương
-> trình em viết bằng Python, phần thuật toán **tự cài** chứ không dùng thư viện
-> có sẵn.
+> **Chuyển:** Đầu tiên xin mời các bạn nhìn qua bài toán em dùng để chạy thử.
 
-*(Bấm Enter.)*
+## Cảnh 1, bài toán, 30 giây
 
-## Cảnh 1, bài toán, 40 giây
+> Có **100 món đồ**, mỗi món một giá trị và một trọng lượng. Chiếc túi chịu
+> được **2725** đơn vị, trong khi tổng trọng lượng cả 100 món là **5451**, tức
+> là chỉ mang được **một nửa**, và phải chọn đúng cái nửa **đáng giá nhất**.
+>
+> Cột mật độ ở cuối bảng cho thấy mọi món **đáng giá gần như nhau**, nên cách
+> làm tham lam, cứ nhặt món mật độ cao nhất trước, **không còn căn cứ** để xếp
+> thứ tự. *(cắt được)*
+>
+> Còn nếu thử hết thì có **2 mũ 100** phương án. Máy xét một tỉ phương án mỗi
+> giây vẫn cần **bốn chục nghìn tỉ năm**. Nên vét cạn **không khả thi**.
+>
+> **Chuyển:** Muốn thuật toán tiến hoá làm việc được thì trước hết phải cho nó
+> một cách biểu diễn lời giải, đó là phần tiếp theo.
 
-> Màn hình đang hiện dữ liệu đầu vào. Có **100 món đồ**, mỗi món có một giá trị
-> và một trọng lượng, ở đây em in ra 10 món đầu cho dễ nhìn. Chiếc túi chịu
-> được tối đa **2725** đơn vị trọng lượng, trong khi tổng trọng lượng của cả
-> 100 món là **5451**. Nghĩa là chỉ mang được khoảng **một nửa**, và việc cần
-> làm là chọn đúng cái nửa **đáng giá nhất**.
+## Cảnh 2, mã hoá, 25 giây
 
-> Các bạn để ý cột cuối cùng, cột mật độ, tức là giá trị chia cho trọng lượng.
-> Mật độ của mọi món đều **xấp xỉ nhau**, chỉ dao động quanh 1.1 tới 1.6. Đây
-> là bộ dữ liệu nhóm em **cố ý chọn cho khó**. Vì khi món nào cũng đáng giá gần
-> như nhau thì cách làm tham lam, tức là cứ nhặt món có mật độ cao nhất trước,
-> sẽ **không còn căn cứ** để xếp thứ tự nữa. *(cắt được)*
+> Mỗi lời giải là một **chuỗi 100 bit**, bit thứ i bằng **1 là mang món thứ i
+> theo**, bằng 0 là để lại. Chuỗi màu xanh này là một cá thể sinh ngẫu nhiên:
+> giải mã ra chọn 44 món, nặng **2546** trên sức chứa 2725 nên **hợp lệ**, tổng
+> giá trị **2986**. Con số đó chính là **fitness** của cá thể.
+>
+> Cá thể nào nặng quá sức chứa thì chương trình **bỏ bớt** món kém giá trị nhất
+> cho tới khi vừa túi, nên mọi cá thể luôn dùng được. *(cắt được)*
+>
+> **Chuyển:** Có cách biểu diễn và cách chấm điểm rồi, giờ thả cho quần thể
+> tiến hoá.
 
-> Còn nếu muốn thử hết mọi cách chọn thì có **2 mũ 100** phương án, tức là 1.27
-> nhân 10 mũ 30. Máy tính xét được một tỉ phương án mỗi giây thì vẫn cần **bốn
-> chục nghìn tỉ năm** mới xong. Nên vét cạn là **không khả thi**, bắt buộc phải
-> đi tìm nghiệm gần đúng.
+## Cảnh 3, tiến hoá, 40 giây
 
-*(Bấm Enter.)*
+*(Để bảng chạy hết rồi hãy nói, đừng nói chen vào lúc các dòng đang hiện ra.)*
 
-## Cảnh 2, mã hoá, 35 giây
+> Quần thể **60 cá thể**, chạy **150 thế hệ**. Chọn lọc theo kiểu thi đấu, bốc
+> ngẫu nhiên 3 cá thể rồi lấy con khoẻ nhất. Lai ghép một điểm, đột biến mỗi
+> gene một phần trăm, và mỗi thế hệ giữ lại nguyên vẹn **2 cá thể tốt nhất**.
+>
+> Có hai cột cần nhìn. Cột **Tốt nhất** đi từ **3249** lên **3395** rồi dừng,
+> và **không bao giờ tụt xuống**, vì luôn giữ lại con khoẻ nhất. Cột **Đa dạng**
+> thì ngược lại, từ **0.97 xuống dưới 0.1**: ban đầu quần thể rải khắp nơi, về
+> sau **xúm lại quanh một vùng**, và đó là lý do càng về cuối càng khó cải
+> thiện thêm.
+>
+> Toàn bộ chạy hết **0.2 giây**, gọi hàm fitness **9060 lần**. Xin các bạn nhớ
+> giùm em con số 9060 này.
+>
+> **Chuyển:** Và đây là lời giải cuối cùng mà nó tìm được.
 
-> Để giải thuật di truyền làm việc được thì trước hết phải **mã hoá** lời giải
-> thành nhiễm sắc thể. Ở đây mỗi lời giải là một **chuỗi 100 bit**, em in ra 40
-> bit đầu. Bit thứ i bằng **1 nghĩa là mang món thứ i theo**, bằng 0 là để lại.
+## Cảnh 4, nghiệm, 15 giây
 
-> Chuỗi màu xanh trên màn hình là một cá thể sinh ngẫu nhiên. Giải mã ra thì nó
-> chọn 44 món, tổng nặng **2546**, vẫn nhỏ hơn sức chứa 2725 nên đây là lời
-> giải **hợp lệ**, và tổng giá trị là **2986**. Con số 2986 đó chính là
-> **fitness**, tức là điểm số của cá thể này.
+> Mang theo **67 trên 100 món**, tổng trọng lượng đúng **2725 trên 2725**, tức
+> là **dùng hết sạch sức chứa**, không thừa một đơn vị nào. Tổng giá trị
+> **3395**.
+>
+> **Chuyển:** Nhưng 3395 là tốt hay chưa tốt thì phải có cái để so. Nên em cho
+> nó chạy đua với ba thuật toán khác.
 
-> Trường hợp cá thể nào nặng quá sức chứa thì chương trình **sửa chữa** nó,
-> bằng cách bỏ dần món có mật độ thấp nhất cho tới khi vừa túi. Nhờ vậy **mọi
-> cá thể trong quần thể luôn là một lời giải dùng được**. *(cắt được)*
-
-*(Bấm Enter.)*
-
-## Cảnh 3, tiến hoá, 55 giây
-
-*(Đây là phần đáng xem nhất. Để bảng chạy hết rồi hãy nói, đừng nói chen vào
-lúc các dòng đang hiện ra.)*
-
-> Đây là phần chính. Quần thể gồm **60 cá thể**, chạy **150 thế hệ**. Chọn lọc
-> theo kiểu thi đấu, mỗi lần bốc ngẫu nhiên 3 cá thể rồi lấy **con khoẻ nhất**
-> làm cha mẹ. Lai ghép một điểm với xác suất 90 phần trăm, đột biến mỗi gene
-> với xác suất 1 phần 100, và mỗi thế hệ giữ lại nguyên vẹn **2 cá thể tốt
-> nhất**.
-
-> Bảng này có bốn cột. Cột **Tốt nhất** là giá trị của cá thể khoẻ nhất tìm
-> được tính tới thế hệ đó. Cột **TB quần thể** là điểm trung bình của cả 60 cá
-> thể. Cột **Đa dạng** đo mức độ khác nhau giữa các cá thể, bằng **1 là mỗi con
-> một kiểu**, bằng **0 là cả quần thể giống hệt nhau**.
-
-> Các bạn nhìn cột Tốt nhất. Thế hệ 0 là quần thể ngẫu nhiên, chỉ được **3249**.
-> Tới khoảng thế hệ 100 thì lên **3395** rồi dừng ở đó. Đường này **chỉ đi lên
-> chứ không bao giờ tụt xuống**, vì cơ chế giữ lại cá thể tốt nhất mà em vừa
-> nói.
-
-> Ngược lại, cột Đa dạng tụt từ **0.97 xuống dưới 0.1** chỉ sau khoảng 30 thế
-> hệ. Nghĩa là ban đầu quần thể rải khắp nơi, càng về sau càng **xúm lại quanh
-> một vùng**. Đây cũng chính là lý do càng về cuối càng khó cải thiện thêm. Nếu
-> quần thể co cụm **quá sớm** thì thuật toán kẹt luôn, phần nhận xét của nhóm
-> em có số liệu đo cụ thể cho chuyện này. *(cắt được)*
-
-> Toàn bộ 150 thế hệ chạy hết **0.2 giây**, gọi hàm fitness **9060 lần**.
-
-*(Bấm Enter. Con số 9060 này nhắc ở đây để cảnh 5 nói tới là người nghe đã quen
-tai.)*
-
-## Cảnh 4, nghiệm, 20 giây
-
-> Đây là lời giải cuối cùng. Nó mang theo **67 trên 100 món**, tổng trọng lượng
-> đúng **2725 trên 2725**, tức là **dùng hết sạch sức chứa** không thừa một đơn
-> vị nào, và tổng giá trị đạt **3395**. Phía dưới là chuỗi bit tương ứng của
-> nghiệm đó.
-
-*(Bấm Enter.)*
-
-## Cảnh 5, đối chứng, 60 giây
+## Cảnh 5, đối chứng, 45 giây
 
 *(Bảng này là chỗ ăn điểm. Nói chậm, chỉ tay vào cột Lệch tối ưu.)*
 
-> Cuối cùng là phần đối chứng. Em cho giải thuật di truyền chạy đua với ba
-> thuật toán khác trên đúng bài toán này.
-
-> Có một chỗ em muốn nhấn mạnh: cả bốn thuật toán đều được cấp **đúng 9060 lần
-> gọi hàm fitness như nhau**. Nếu không khống chế chỗ này thì thuật toán nào
-> được chạy lâu hơn sẽ tự khắc cho kết quả tốt hơn, **so sánh sẽ mất ý nghĩa**.
-
-> Kết quả là di truyền được 3395, lệch **0 phần trăm** so với nghiệm tối ưu.
-> Tham lam được 3330, lệch **1.91**. Leo đồi được 3299, lệch **2.83**. Tìm kiếm
-> ngẫu nhiên được 3302, lệch **2.74**.
-
-> Dòng cuối cùng là quy hoạch động. Nó cho nghiệm tối ưu tuyệt đối là 3395 và
-> chỉ mất một phần nghìn giây, tức là **nhanh hơn hẳn**. Em xin nói rõ chỗ này
-> vì chắc sẽ có câu hỏi: với **đúng dạng bài này** thì quy hoạch động tốt hơn
-> thật, nhóm em không giấu chuyện đó. Nhưng nó cần một bảng **100 nhân 2726 ô
-> nhớ**, tức là bộ nhớ phụ thuộc vào sức chứa của túi, và nó đòi trọng lượng
-> phải là **số nguyên**. Thêm một ràng buộc mới, ví dụ giới hạn thêm về thể
-> tích, là **phải thiết kế lại từ đầu**. Còn với giải thuật di truyền thì
-> **chỉ cần sửa hàm tính fitness**, khung thuật toán giữ nguyên.
-
-> Bài cái túi ở đây đóng vai trò một **bài toán mẫu**: chính vì **biết trước
-> nghiệm tối ưu** nên nhóm em mới đo được giải thuật di truyền sai lệch bao
-> nhiêu phần trăm. Phần kết quả chi tiết và các thí nghiệm về tham số, em xin
-> mời bạn tiếp theo trình bày.
+> Cả bốn thuật toán đều được cấp **đúng 9060 lần gọi hàm fitness như nhau**,
+> con số em vừa nhắc. Không khống chế chỗ này thì thuật toán nào chạy lâu hơn
+> sẽ tự khắc tốt hơn, **so sánh mất ý nghĩa**.
+>
+> Di truyền được 3395, lệch **0 phần trăm**. Tham lam lệch **1.91**, leo đồi
+> **2.83**, ngẫu nhiên **2.74**.
+>
+> Dòng cuối là quy hoạch động, cho đúng nghiệm tối ưu và còn **nhanh hơn hẳn**.
+> Em xin nói rõ luôn vì chắc sẽ có câu hỏi: với **đúng dạng bài này** thì quy
+> hoạch động tốt hơn thật. Nhưng nó cần bảng **100 nhân 2726 ô nhớ**, đòi trọng
+> lượng phải là **số nguyên**, và thêm một ràng buộc mới là **phải thiết kế lại
+> từ đầu**. Còn giải thuật di truyền thì **chỉ sửa hàm fitness**, khung thuật
+> toán giữ nguyên.
+>
+> **Chuyển sang bạn tiếp theo:** Bài cái túi ở đây đóng vai trò một **bài toán
+> mẫu**, vì biết trước nghiệm tối ưu nên nhóm em mới đo được sai lệch bao nhiêu
+> phần trăm. Phần kết quả chi tiết xin mời bạn tiếp theo trình bày.
 
 ---
 
