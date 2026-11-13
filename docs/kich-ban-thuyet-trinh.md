@@ -17,11 +17,16 @@ Chữ in nghiêng trong ngoặc là ghi chú cho mình, không đọc lên.
 
 *(Terminal đã mở sẵn ở thư mục dự án, lệnh đã gõ nhưng chưa bấm Enter.)*
 
-> Em xin phép trình bày phần cài đặt. Như các bạn vừa nghe, giải thuật di
-> truyền làm việc trên một quần thể lời giải, qua mỗi thế hệ thì chọn lọc, lai
-> ghép và đột biến để quần thể tốt dần lên. Bây giờ em cho chạy thật trên bài
-> toán Cái túi 0 1 để thấy quá trình đó diễn ra như thế nào. Chương trình em
-> viết bằng Python, phần thuật toán tự cài chứ không dùng thư viện có sẵn.
+> Em xin phép trình bày phần cài đặt. Giải thuật tiến hoá là tên của cả một
+> họ thuật toán, và nhóm em chọn nhánh tiêu biểu nhất là giải thuật di truyền
+> để cài đặt, vì bài toán Cái túi 0 1 là bài rời rạc, mỗi món chỉ có lấy hoặc
+> không lấy, rất hợp với cách mã hoá nhị phân của giải thuật di truyền.
+>
+> Như các bạn vừa nghe, thuật toán này làm việc trên một quần thể lời giải,
+> qua mỗi thế hệ thì chọn lọc, lai ghép và đột biến để quần thể tốt dần lên.
+> Bây giờ em cho chạy thật để thấy quá trình đó diễn ra như thế nào. Chương
+> trình em viết bằng Python, phần thuật toán tự cài chứ không dùng thư viện
+> có sẵn.
 
 *(Bấm Enter.)*
 
@@ -129,6 +134,21 @@ lúc các dòng đang hiện ra.)*
 > tối ưu nên nhóm em mới đo được giải thuật di truyền sai lệch bao nhiêu phần
 > trăm. Phần kết quả chi tiết và các thí nghiệm về tham số, em xin mời bạn tiếp
 > theo trình bày. *(cắt được, nhưng nên giữ vì đây là câu chuyển cho TV5)*
+
+---
+
+## Năm cảnh này bám theo yêu cầu nào của đề
+
+| Cảnh | Yêu cầu trong đề |
+|---|---|
+| 1. Bài toán | yêu cầu 1, phát biểu bài toán: input, output, ràng buộc, mục tiêu |
+| 2. Mã hoá | yêu cầu 4, biểu diễn dữ liệu: nhiễm sắc thể và hàm fitness |
+| 3. Tiến hoá | yêu cầu 2, phương pháp: các toán tử chạy thật qua từng thế hệ |
+| 4. Nghiệm | yêu cầu 5, kết quả của một lần chạy |
+| 5. Đối chứng | yêu cầu 5 và 6, so sánh với thuật toán khác và đánh giá |
+
+Thứ tự không đảo được: chưa phát biểu bài toán thì không mã hoá được, chưa biết
+nhiễm sắc thể là gì thì nhìn bảng tiến hoá cũng không hiểu.
 
 ---
 
